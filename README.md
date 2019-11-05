@@ -27,7 +27,12 @@ Para o preprocessamento dos dados, foi utilizada a biblioteca spaCy, que disponi
 
 Para a escolha do hiperparâmetro `num_topics`, foram treinados modelos com diferentes número de tópicos, e analisando o `coherence score`, o melhor modelo seria aquele treinado com `num_topics = 12`, uma vez que este foi o que apresentou o maior valor. Entretanto, avaliando a interpretabilidade dos tópicos identificados, esse modelo deixou a desejar, dado que no mesmo há uma sobreposição de temas em diferentes tópicos. Por este motivo, optou-se por selecionar um modelo com menor número de tópicos (`num_topics = 5`), já que esse ofereceu resultados mais interpretáveis e coerentes.
 
+A visualização abaixo consiste nos cinco tópicos identificados e as principais palavras que os compõem. No Jupyter notebook da análise, é possível interagir com a visualização, mas para isso é necessário clonar o repositório e executar a análise localmente.
+
+<img src="img/lda_vis.png">
+
 Uma vez escolhido o modelo, foram assinalados manualmente rótulos para cada um dos tópicos identificados, com base nos termos que os compõem. Em seguida, adicionou-se ao dataframe uma coluna (`main_topic`) referente ao tópico com maior probabilidade para cada uma das reviews, conforme identificado pelo modelo.
+
 
 ## Validação
 
